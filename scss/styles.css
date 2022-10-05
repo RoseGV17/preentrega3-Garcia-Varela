@@ -13,6 +13,7 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -26,7 +27,109 @@ header {
   flex-direction: column;
   align-items: center;
   font-family: "Prata", serif;
+  font-size: x-large;
+  font-weight: bolder;
   margin: 0px;
+}
+
+/*-----------------------general text style mobile view-----------------------*/
+.titles {
+  color: #69A5A4;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.paragraph {
+  margin: 0px;
+  font-size: 8px;
+}
+
+/*-----------------------index presentation mobile view-----------------------*/
+#presentation_video {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.presentation_style {
+  margin: 15px 25px 15px 25px;
+}
+
+#presentation_paragraph1 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-areas: "aside article";
+  align-items: center;
+  grid-column-gap: 10px;
+}
+
+#presentation_paragraph2 {
+  margin-top: 35px;
+  display: grid;
+  grid-template-areas: "article aside";
+  align-items: center;
+}
+
+.presentation_sofi-pic {
+  max-width: 93.75px;
+  max-height: 93.75px;
+  border-radius: 15px;
+}
+
+.reviews_pic {
+  position: relative;
+  max-width: 250px;
+  max-height: 125px;
+  margin-top: 15px;
+}
+
+.reviews > img {
+  opacity: 0;
+  animation: display 5s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/*-----------------------learning resources standard layout-----------------------*/
+.resource_grid {
+  margin: 10px 20px 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 7px;
+  align-items: center;
+  justify-items: center;
+}
+
+.resource__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource_image {
+  max-width: 125px;
+  max-height: 125px;
+  grid-area: "rcs_image";
+}
+
+.resource_name {
+  max-width: 125px;
+  text-decoration: none;
+  grid-area: "rcs_name";
 }
 
 /*-----------------------nav-----------------------*/
@@ -58,35 +161,72 @@ nav {
   color: black;
 }
 
-/*-----------------------learning resources standard layout-----------------------*/
-.resource_grid {
-  margin: 10px 20px 10px 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 7px;
-  align-items: center;
-  justify-items: center;
-}
-
-.resource__item {
+.book_me {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.resource_image {
-  max-width: 125px;
-  max-height: 125px;
-  grid-area: "rcs_image";
+#book_me_button {
+  color: white;
+  background-color: #66245B;
+  border: #A8C4A2;
+  border-style: solid;
+  padding: 15px;
+}
+#book_me_button:hover {
+  background-color: #69A5A4;
 }
 
-.resource_name {
-  max-width: 125px;
-  text-decoration: none;
-  grid-area: "rcs_name";
-}
-
-/*---------------------------------learning resources tablet view---------------------------------*/
 @media screen and (min-width: 600px) {
+  /*-----------------------general text style-----------------------*/
+  .titles {
+    color: #69A5A4;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .paragraph {
+    margin: 0px;
+    font-size: 13px;
+  }
+  /*-----------------------index presentation-----------------------*/
+  #presentation_video {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .presentation_style {
+    margin: 20px 100px 20px 100px;
+  }
+  #presentation_paragraph1 {
+    margin-top: 30px;
+    display: grid;
+    grid-template-areas: "aside article";
+    align-items: center;
+    grid-column-gap: 15px;
+  }
+  #presentation_paragraph2 {
+    margin-top: 45px;
+    display: grid;
+    grid-template-areas: "article aside";
+    align-items: center;
+  }
+  .presentation_sofi-pic {
+    max-width: 187.5px;
+    max-height: 187.5px;
+    border-radius: 20px;
+  }
+  /*-----------------------reviews-----------------------*/
+  .reviews_pic {
+    position: relative;
+    max-width: 375px;
+    max-height: 250px;
+    margin-top: 15px;
+  }
+  /*---------------------------------learning resources tablet view---------------------------------*/
+}
+@media screen and (min-width: 600px) and (min-width: 600px) {
   .resource_grid {
     margin: 15px 30px 15px 30px;
     display: grid;
@@ -106,13 +246,61 @@ nav {
     grid-area: "rcs_name";
   }
 }
-/*---------------------------------learning resources desktop view---------------------------------*/
 @media screen and (min-width: 1024px) {
+  /*-----------------------general text style-----------------------*/
+  .titles {
+    color: #69A5A4;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .paragraph {
+    margin: 0px;
+    font-size: 18px;
+  }
+  /*-----------------------index presentation-----------------------*/
+  #presentation_video {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .presentation_style {
+    margin: 25px 150px 25px 150px;
+  }
+  #presentation_paragraph1 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-areas: "aside article";
+    align-items: center;
+    grid-column-gap: 20px;
+  }
+  #presentation_paragraph2 {
+    margin-top: 60px;
+    display: grid;
+    grid-template-areas: "article aside";
+    align-items: center;
+  }
+  .presentation_sofi-pic {
+    max-width: 281.25px;
+    max-height: 281.25px;
+    border-radius: 25px;
+  }
+  /*-----------------------reviews-----------------------*/
+  .reviews_pic {
+    position: relative;
+    max-width: 625px;
+    max-height: 375px;
+    margin-top: 15px;
+  }
+  /*---------------------------------learning resources desktop view---------------------------------*/
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   .resource_grid {
     margin: 25px 50px 25px 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 15px;
+    column-gap: 15px;
     align-items: center;
     justify-items: center;
   }
@@ -126,6 +314,23 @@ nav {
     text-decoration: none;
     grid-area: "rcs_name";
   }
+}
+/*-----------------------footer-----------------------*/
+.foot {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 3px;
+}
+
+.foot_text {
+  font-size: small;
+  text-decoration: none;
+}
+
+.foot_divisor {
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 /*# sourceMappingURL=styles.css.map */

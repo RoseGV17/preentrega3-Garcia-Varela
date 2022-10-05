@@ -2,6 +2,7 @@
 $primary-color: #E5EAA4;
 $secondary-color: #A8C4A2;
 $tertiary-color: #66245B;
+$quaternary-color: #69A5A4;
 $image-size: 125px;
 
 @font-face{
@@ -20,9 +21,9 @@ body{
 }
 
 a{
+    color: inherit;
     text-decoration: none;
 }
-
 
 /*-----------------------header-----------------------*/
 header{
@@ -34,43 +35,41 @@ header{
     flex-direction: column;
     align-items: center;
     font-family: 'Prata', serif;
+    font-size: x-large;
+    font-weight: bolder;
     margin: 0px;
 }
 
-/*-----------------------nav-----------------------*/
-nav{
-    background-color: $tertiary-color;
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    padding: 10px;
-}
 
-.nav_current {
-    color: $primary-color;
-    text-decoration: none;
-    padding: 10px;
-    
-    &:hover{
-        background-color: $secondary-color;
-    color: black;
-    }
-}
-
-
-.nav_other {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-
-    &:hover{
-        background-color: $secondary-color;
-        color: black;
-    }
-}
-
-
+@import "styles-mobile.scss";
 @import "rsc-mobile.scss";
-@import "rsc-tablet.scss";
-@import "rsc-desktop.scss";
+
+@import "nav.scss";
+
+.book_me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#book_me_button{
+    color: white;
+    background-color: $tertiary-color;
+    border: $secondary-color;
+    border-style: solid;
+    padding: 15px;
+    &:hover{
+        background-color: $quaternary-color;
+    }
+}
+
+@media screen and (min-width: 600px){
+    @import "styles-tablet.scss";
+    @import "rsc-tablet.scss";
+}
+@media screen and (min-width: 1024px){
+    @import "styles-desktop.scss";
+    @import "rsc-desktop.scss";
+}
 @import "formular.scss";
+@import "footer.scss"
