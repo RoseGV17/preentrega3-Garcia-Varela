@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Prata";
+  src: url(./Images-n-fonts/Prata-Regular.ttf);
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #E5EAA4;
+  font-family: Helvetica, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*-----------------------header-----------------------*/
+header {
+  margin: 10px;
+}
+
+.header_motto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Prata", serif;
+  margin: 0px;
+}
+
+/*-----------------------nav-----------------------*/
+nav {
+  background-color: #66245B;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.nav_current {
+  color: #E5EAA4;
+  text-decoration: none;
+  padding: 10px;
+}
+.nav_current:hover {
+  background-color: #A8C4A2;
+  color: black;
+}
+
+.nav_other {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.nav_other:hover {
+  background-color: #A8C4A2;
+  color: black;
+}
+
+/*-----------------------learning resources standard layout-----------------------*/
+.resource_grid {
+  margin: 10px 20px 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 7px;
+  align-items: center;
+  justify-items: center;
+}
+
+.resource__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource_image {
+  max-width: 125px;
+  max-height: 125px;
+  grid-area: "rcs_image";
+}
+
+.resource_name {
+  max-width: 125px;
+  text-decoration: none;
+  grid-area: "rcs_name";
+}
+
+/*---------------------------------learning resources tablet view---------------------------------*/
+@media screen and (min-width: 600px) {
+  .resource_grid {
+    margin: 15px 30px 15px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 11px;
+    align-items: center;
+    justify-items: center;
+  }
+  .resource_image {
+    max-width: 250px;
+    max-height: 250px;
+    grid-area: "rcs_image";
+  }
+  .resource_name {
+    max-width: 250px;
+    text-decoration: none;
+    grid-area: "rcs_name";
+  }
+}
+/*---------------------------------learning resources desktop view---------------------------------*/
+@media screen and (min-width: 1024px) {
+  .resource_grid {
+    margin: 25px 50px 25px 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 15px;
+    align-items: center;
+    justify-items: center;
+  }
+  .resource_image {
+    max-width: 375px;
+    max-height: 375px;
+    grid-area: "rcs_image";
+  }
+  .resource_name {
+    max-width: 375px;
+    text-decoration: none;
+    grid-area: "rcs_name";
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

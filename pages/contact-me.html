@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="../scss/styles.css">
+        <title>Spanishtive - Professional Spanish Teacher</title>
+        <link rel="icon" type="image/png" href="../images-n-fonts/favicon.png">
+    </head>
+    
+    <body>
+        <!-- Header y nav / igual en todas las páginas -->
+        <header>
+            <h1 class="header_motto">SPANISHTIVE</h1>
+            <h4 class="header_motto">Professional Spanish Teacher - Online lessons & resources</h4>
+        </header>
+        <nav>
+            <span><a href="../index.html" class="nav_other">Home</a></span>
+            <span><a href="lessons.html" class="nav_other">About lessons</a></span>
+            <span><a href="grammar.html" class="nav_other">Grammar exercises</a></span>
+            <span><a href="conversation.html" class="nav_other">Conversation topics</a></span>
+            <span><a href="contact-me.html" class="nav_current">Contact me</a></span>
+        </nav>
+        
+        <!-- Formulario de contacto -->
+        <form post>
+            <fieldset>
+                <legend>Contact me</legend>
+                <div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Preferred name:</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Please write your name here" required>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Contact e-mail:</label>
+                        <input type="text" class="form-control" name="email" placeholder="Please write your e-mail here" required>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="type-lesson" class="form-label">What are you interested in:</label>
+                        <select id="type-lesson" class="form-control" name="type-lesson">
+                            <option value="GL">Grammar learning</option>
+                            <option value="Convo">Conversation practice</option>
+                            <option value="LT">Learning for travel</option>
+                            <option value="LW">Learning for work</option>
+                            <option value="TP">Test preparation</option>    
+                        </select>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="contact-message" class="form-label">Please elaborate further</label>
+                        <textarea class="form-control" name="contact-message" rows="4" required> </textarea>
+                    </div>
+                    <br>
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+
+        <!-- Footer / igual en todas las páginas -->
+        <footer>
+            <div class="foot">
+                <span><a href="https://www.instagram.com/spanishtive/" target="_blank">Instagram</a></span>
+                <span class="foot_divisor">|</span>
+                <span><a href="https://bookme.name/sofytalk/" target="_blank">BookLikeABoss</a></span>
+            </div>
+        </footer>
+    </body>
+
+</html>

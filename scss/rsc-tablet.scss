@@ -1,0 +1,24 @@
+/*---------------------------------learning resources tablet view---------------------------------*/
+
+@media screen and (min-width: 600px){
+    .resource_grid{
+        margin: 15px 30px 15px 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 11px;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .resource_image {
+        max-width: $image-size*2;
+        max-height: $image-size*2;
+        grid-area: "rcs_image";
+    }
+    
+    .resource_name {
+        max-width: $image-size*2;
+        text-decoration: none;
+        grid-area: "rcs_name";
+    }
+}

@@ -1,0 +1,76 @@
+
+$primary-color: #E5EAA4;
+$secondary-color: #A8C4A2;
+$tertiary-color: #66245B;
+$image-size: 125px;
+
+@font-face{
+    font-family: 'Prata';
+    src: url(./Images-n-fonts/Prata-Regular.ttf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    }
+
+body{
+    background-color: $primary-color;
+    font-family: Helvetica, serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*-----------------------header-----------------------*/
+header{
+    margin: 10px;
+}
+
+.header_motto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Prata', serif;
+    margin: 0px;
+}
+
+/*-----------------------nav-----------------------*/
+nav{
+    background-color: $tertiary-color;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav_current {
+    color: $primary-color;
+    text-decoration: none;
+    padding: 10px;
+    
+    &:hover{
+        background-color: $secondary-color;
+    color: black;
+    }
+}
+
+
+.nav_other {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+
+    &:hover{
+        background-color: $secondary-color;
+        color: black;
+    }
+}
+
+
+@import "rsc-mobile.scss";
+@import "rsc-tablet.scss";
+@import "rsc-desktop.scss";
+@import "formular.scss";

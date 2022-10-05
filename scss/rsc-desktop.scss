@@ -1,0 +1,24 @@
+/*---------------------------------learning resources desktop view---------------------------------*/
+
+@media screen and (min-width: 1024px){
+    .resource_grid{
+        margin: 25px 50px 25px 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 15px;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .resource_image {
+        max-width: $image-size*3;
+        max-height: $image-size*3;
+        grid-area: "rcs_image";
+    }
+    
+    .resource_name {
+        max-width: $image-size*3;
+        text-decoration: none;
+        grid-area: "rcs_name";
+    }
+}
